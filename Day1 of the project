@@ -1,0 +1,21 @@
+import csv
+
+print("A Simple Data Analysis Program")
+print("This program will read a CSV file and display the data in a table")
+emissions_dict = {}  # this will create an empty dictionary for the data
+
+"""
+Here I am importing the CSV file uploded in the Repo to read the content in the file in organized way.
+"""
+
+with open('Emissions.csv', 'r') as csvfile: 
+    #Read into file objects and split with "\n"
+    for data in csvfile.read().split("\n"):
+        # Updating the dictionary file, Splitting the string by comma(,) and Store first value as KEY and store other value as VALUE
+        emissions_dict.update({data.split(",")[0]: data.split(",")[1:]})
+
+for x, y in emissions_dict.items():
+    print(x, end=" = ")
+    print(y)
+
+print("All data from Emissions.csv has been read into a dictionary.")
