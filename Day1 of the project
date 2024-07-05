@@ -1,5 +1,11 @@
 import csv
 
+
+"""
+The approach that I am taking for this project is
+1) Oppening the CSV file into read mode and looping through the data.
+2) Printing the data to ensure the successful read.
+"""
 print("A Simple Data Analysis Program")
 print("This program will read a CSV file and display the data in a table")
 emissions_dict = {}  # this will create an empty dictionary for the data
